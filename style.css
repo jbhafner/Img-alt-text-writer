@@ -1,0 +1,11 @@
+.inputBox {
+   width: 300px;
+}
+
+#imgAltText {
+   font-weight: bolder ;
+}
+
+#confidence {
+   font-weight: bolder ;
+}
