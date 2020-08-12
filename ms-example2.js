@@ -3,7 +3,7 @@ function processImage() {
    // **********************************************
    // *** Update or verify the following values. ***
    // **********************************************
-
+    console.log('button clicked');
    var subscriptionKey = document.getElementById("subscriptionKey").value;
    var endpoint = document.getElementById("endpointUrl").value;
    

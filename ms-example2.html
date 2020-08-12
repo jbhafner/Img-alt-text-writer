@@ -3,6 +3,7 @@
 
 <head>
     <title>Analyze Sample</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <link rel="stylesheet" type="text/css" href="style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 </head>
@@ -14,37 +15,58 @@
     <h1>Analyze image:</h1>
     Enter the URL to an image, then click the <strong>Analyze image</strong> button.
     <br><br>
-    Subscription key:
-    <input class="inputBox" type="text" name="subscriptionKey" id="subscriptionKey" value="" />
-    <br><br>
-    Endpoint URL:
-    <input class="inputBox" type="text" name="endpointUrl" id="endpointUrl"
-        value="https://eastus.api.cognitive.microsoft.com/vision/v2.0/describe?" />
-    <br><br>
-    Image to analyze:
-    <input class="inputBox" type="text" name="inputImage" id="inputImage"
-        value="https://upload.wikimedia.org/wikipedia/commons/3/3c/Shaki_waterfall.jpg" />
-    <br><br>
-    <button onclick="processImage()">Analyze image</button>
-    <br><br>
-    <div id="wrapper" style="width:1020px; display:table;">
-        <div id="jsonOutput" style="width:600px; display:table-cell;">
-            Response:
-            <br><br>
-            <textarea id="responseTextArea" class="UIInput" style="width:580px; height:400px;"></textarea>
-        </div>
-        <div id="imageDiv" style="width:420px; display:table-cell;">
-            Source image:
-            <br><br>
-            <img id="sourceImage" width="400" />
-            <br><br>
-            Image Alt Text:
-            <div id="imgAltText"></div>
-            <br><br>
-            Confidence:
-            <div id="confidence"></div>
+    <div class="row">
+        <form class="col s12">
+            <div class="row">
+                <div class="input-field col s12">
+                    <input class="validate" type="text" name="subscriptionKey" id="subscriptionKey" value="" />
+                    <label class="active" for="subscriptionKey">Subscription Key</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <input class="validate" type="text" name="endpointUrl" id="endpointUrl"
+                        value="https://eastus.api.cognitive.microsoft.com/vision/v2.0/describe?" />
+                    <label class="active" for="endpointUrl">End Point URL</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <input class="validate" type="text" name="inputImage" id="inputImage"
+                        value="https://upload.wikimedia.org/wikipedia/commons/3/3c/Shaki_waterfall.jpg" />
+                    <label class="active" for="inputImage">Image to Analyze</label>
+                </div>
+            </div>
+
+            <a class="waves-effect waves-light btn" onclick="processImage()">Analyze image</a>
+        </form>
+        <div class="container" id="wrapper" style="width:1020px; display:table;">
+            <div id="jsonOutput" style="width:600px; display:table-cell;">
+                Response:
+                <br><br>
+                <textarea id="responseTextArea" class="UIInput" style="width:580px; height:400px;"></textarea>
+            </div>
+            <div id="imageDiv" style="width:420px; display:table-cell;">
+                Source image:
+                <br><br>
+                <img id="sourceImage" width="400" />
+                <br><br>
+                Image Alt Text:
+                <div id="imgAltText"></div>
+                <br><br>
+                Confidence:
+                <div id="confidence"></div>
+            </div>
         </div>
     </div>
+
+
+
+    <br><br>
+
+
 </body>
 
 </html>
