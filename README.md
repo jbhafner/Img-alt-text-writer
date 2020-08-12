@@ -17,6 +17,6 @@ Materialize Library - https://materializecss.com/
 Screenshot for Keyword Generator:
 --------------------------------
 
-<img src="imgAnalyzer.png">
+<img src="imageAnalyzer.png">
 
 
